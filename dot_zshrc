@@ -290,18 +290,5 @@ eval "$(pyenv init - zsh)"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 alias claude="/Users/n13u/.claude/local/claude"
 eval "$(rbenv init -)"
