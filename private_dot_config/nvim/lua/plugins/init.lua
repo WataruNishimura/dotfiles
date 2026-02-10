@@ -46,6 +46,12 @@ return {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
     opts = {},
+  },
+  {
+    'nvim-mini/mini.nvim', 
+    version = false,
+    config = function()
+      require("mini.pairs").setup()
+    end,
   }
 }
-  
