@@ -17,3 +17,4 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 -- ショートカットでターミナルを開く
 vim.keymap.set('n', '<leader>t', ':split | terminal<CR>')
 
+vim.keymap.set('n', '<leader>j', vim.diagnostic.open_float)
