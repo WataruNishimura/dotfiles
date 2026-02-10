@@ -6,18 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{\"cwd\": \"'\"$(pwd)\"'\", \"notification_type\": \"stop\"}' | ~/.claude/notify.sh"
-          }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/notify.sh"
+            "command": "~/scripts/claude-completion-notify.sh"
           }
         ]
       }
