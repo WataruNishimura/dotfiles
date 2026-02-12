@@ -48,10 +48,18 @@ return {
     opts = {},
   },
   {
-    'nvim-mini/mini.nvim', 
+    'nvim-mini/mini.nvim',
     version = false,
     config = function()
       require("mini.pairs").setup()
     end,
+  },
+  {
+    'nvim-telescope/telescope.nvim', version = '*',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        -- optional but recommended
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    }
   }
 }

@@ -17,3 +17,7 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 vim.keymap.set('n', '<leader>t', ':split | terminal<CR>')
 
 vim.keymap.set('n', '<leader>j', vim.diagnostic.open_float)
+
+
+-- telescopeの設定 --
+vim.keymap.set('n', '<leader>ff', function() require('telescope.builtin').find_files() end, { desc = 'Telescope find files' })
