@@ -100,4 +100,4 @@ eval "$(rbenv init -)"
 # 1password sock path
 export OP_AGENT_SOCK="~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
