@@ -103,3 +103,5 @@ export OP_AGENT_SOCK="~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agen
 export PATH="$PATH:$HOME/.local/bin"
 
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
+
+eval "$(git wt --init zsh)"
