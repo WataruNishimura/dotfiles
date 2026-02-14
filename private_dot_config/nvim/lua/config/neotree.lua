@@ -6,8 +6,8 @@ require("neo-tree").setup(
       git_status = {
         symbols = {
           -- Change type
-          added = "", -- or "✚"
-          modified = "", -- or ""
+          added = "+", -- or "✚"
+          modified = "⚫︎", -- or ""
           deleted = "✖", -- this can only be used in the git_status source
           renamed = "󰁕", -- this can only be used in the git_status source
           -- Status type
@@ -22,6 +22,13 @@ require("neo-tree").setup(
     file_size = {
       enabled=true,
       width=12,
+    },
+    filesystem = {
+      filtered_items = {
+        visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+        hide_dotfiles = false,
+        hide_gitignored = true,
+      },
     }
   }
 )
