@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "hooks": {
     "Stop": [
       {
@@ -11,5 +14,10 @@
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "document-skills@anthropic-agent-skills": true,
+    "WataruNishimura/git-worktree@n13u": true,
+    "git-worktree@n13u": true
   }
 }
