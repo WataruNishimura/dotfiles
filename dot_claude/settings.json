@@ -19,5 +19,26 @@
     "document-skills@anthropic-agent-skills": true,
     "WataruNishimura/git-worktree@n13u": true,
     "git-worktree@n13u": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git push *)",
+      "Bash(git stash *)",
+      "Bash(git log *)",
+      "Bash(git status *)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm run *)",
+      "Bash(uv install *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(pwd *)"
+    ]
   }
 }
