@@ -12,6 +12,7 @@ vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>')
 
 -- Escでターミナルモードから抜ける
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('t', '<M-c>', '<C-\\><C-n>')
 
 -- ショートカットでターミナルを開く
 vim.keymap.set('n', '<leader>t', ':split | terminal<CR>')
