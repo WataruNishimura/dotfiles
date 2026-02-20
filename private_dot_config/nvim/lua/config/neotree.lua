@@ -29,6 +29,9 @@ require("neo-tree").setup(
         hide_dotfiles = false,
         hide_gitignored = true,
       },
+      follow_current_file = {
+        enabled = false,
+      }
     }
   }
 )
