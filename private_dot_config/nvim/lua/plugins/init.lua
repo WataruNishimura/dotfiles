@@ -85,5 +85,12 @@ return {
     { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
     { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
   },
+},
+{
+  "WataruNishimura/git-wt.nvim",
+  dependencies = { "nvim-telescope/telescope.nvim" }, -- optional
+  config = function()
+    require("git-wt").setup()
+  end,
 }
 }
