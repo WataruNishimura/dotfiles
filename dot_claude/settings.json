@@ -61,6 +61,22 @@
       "Bash(whoami *)",
       "Bash(date *)",
       "Bash(id *)"
+    ],
+    "deny": [
+      "Bash(git rm *)",
+      "Bash(git clean *)",
+      "Bash(git reset --hard *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git branch -D *)",
+      "Bash(git checkout -- *)",
+      "Bash(git restore *)",
+      "Bash(rm *)",
+      "Bash(rm -r *)",
+      "Bash(rm -rf *)",
+      "Bash(rmdir *)",
+      "Bash(unlink *)",
+      "Bash(shred *)"
     ]
   }
 }
