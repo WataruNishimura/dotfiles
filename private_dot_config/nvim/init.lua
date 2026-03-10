@@ -6,5 +6,6 @@ vim.opt.softtabstop = 2
 vim.opt.encoding = 'utf-8'
 
 require("keymaps")
+require("qall")
 require("config.lazy")
 require("config.neotree")
