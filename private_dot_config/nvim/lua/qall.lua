@@ -1,4 +1,4 @@
-nvim.api.nvim_create_user_command(
+vim.api.nvim_create_user_command(
   "Qall",
   function() 
     local current_win = vim.api.nvim_get_current_win()
