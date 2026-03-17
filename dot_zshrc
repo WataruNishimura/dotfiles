@@ -105,3 +105,5 @@ export PATH="$PATH:$HOME/.local/bin"
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
 eval "$(git wt --init zsh)"
+
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
