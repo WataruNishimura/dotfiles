@@ -22,6 +22,7 @@ vim.keymap.set('n', '<leader>j', vim.diagnostic.open_float)
 
 -- telescopeの設定 --
 vim.keymap.set('n', '<leader>ff', function() require('telescope.builtin').find_files() end, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>lg', function() require('telescope.builtin').live_grep() end, { desc = 'Telescope find files' })
 
 -- language server protocol, 定義ジャンプ --
 vim.keymap.set('n', 'gd', '<cmd>:lua vim.lsp.buf.definition()<CR>')
