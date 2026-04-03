@@ -10,4 +10,9 @@ config.color_scheme = 'GitHub Dark'
 config.keys = require("keybinds").keys
 config.key_tables = require("keybinds").key_tables
 
+config.font = wezterm.font_with_fallback({
+  'JetBrainsMono Nerd Font Mono',
+  'Hiragino Kaku Gothic ProN'
+})
+
 return config
