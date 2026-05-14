@@ -30,8 +30,9 @@ require("neo-tree").setup(
         hide_gitignored = true,
       },
       follow_current_file = {
-        enabled = false,
-      }
+        enabled = true,
+      },
+      use_libuv_file_watcher = true
     }
   }
 )
