@@ -27,3 +27,44 @@ vim.keymap.set('n', '<leader>lg', function() require('telescope.builtin').live_g
 -- language server protocol, 定義ジャンプ --
 vim.keymap.set('n', 'gd', '<cmd>:lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set('n', 'gD', '<cmd>:lua vim.lsp.buf.declaration()<CR>')
+
+-- importの一括追加スクリプト --
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local bufnr = args.buf
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+    -- すべての未 import を一括追加
+    vim.keymap.set("n", "<leader>oi", function()
+      vim.lsp.buf.code_action({
+        apply = true,
+        context = {
+          only = { "source.addMissingImports.ts" },
+          diagnostics = {},
+        },
+      })
+    end, { buffer = bufnr, desc = "Add missing imports" })
+
+    -- 未使用 import を削除
+    vim.keymap.set("n", "<leader>ru", function()
+      vim.lsp.buf.code_action({
+        apply = true,
+        context = {
+          only = { "source.removeUnused.ts" },
+          diagnostics = {},
+        },
+      })
+    end, { buffer = bufnr, desc = "Remove unused" })
+
+    -- import の並び替え
+    vim.keymap.set("n", "<leader>oo", function()
+      vim.lsp.buf.code_action({
+        apply = true,
+        context = {
+          only = { "source.organizeImports" },
+          diagnostics = {},
+        },
+      })
+    end, { buffer = bufnr, desc = "Organize imports" })
+  end,
+})
