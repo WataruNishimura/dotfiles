@@ -77,7 +77,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.keymap.set("n", lhs, rhs, { buffer = bufnr, desc = desc })
     end
 
-    map("<leader>j", vim.lsp.buf.hover, "Hover: type info")
+    map("<leader>i", vim.lsp.buf.hover, "Hover: type info")
     map("<leader>k", vim.lsp.buf.signature_help, "Signature help")
     map("<leader>e", vim.diagnostic.open_float, "Show diagnostics")
     map("gd", vim.lsp.buf.definition, "Go to definition")
