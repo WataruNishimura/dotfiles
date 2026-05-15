@@ -68,3 +68,22 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, { buffer = bufnr, desc = "Organize imports" })
   end,
 })
+
+-- LSPのホバー表示 --
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local bufnr = args.buf
+    local map = function(lhs, rhs, desc)
+      vim.keymap.set("n", lhs, rhs, { buffer = bufnr, desc = desc })
+    end
+
+    map("<leader>j", vim.lsp.buf.hover, "Hover: type info")
+    map("<leader>k", vim.lsp.buf.signature_help, "Signature help")
+    map("<leader>e", vim.diagnostic.open_float, "Show diagnostics")
+    map("gd", vim.lsp.buf.definition, "Go to definition")
+    map("gr", vim.lsp.buf.references, "Find references")
+    map("gi", vim.lsp.buf.implementation, "Go to implementation")
+    map("<leader>rn", vim.lsp.buf.rename, "Rename")
+    map("<leader>ca", vim.lsp.buf.code_action, "Code action")
+  end,
+})
