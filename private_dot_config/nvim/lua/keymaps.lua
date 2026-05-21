@@ -28,6 +28,9 @@ vim.keymap.set('n', '<leader>lg', function() require('telescope.builtin').live_g
 vim.keymap.set('n', 'gd', '<cmd>:lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set('n', 'gD', '<cmd>:lua vim.lsp.buf.declaration()<CR>')
 
+-- formatter --
+vim.keymap.set('n', '<leader>fm', function() require("conform").format() end, { desc = 'Format by formatter' })
+
 -- importの一括追加スクリプト --
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
