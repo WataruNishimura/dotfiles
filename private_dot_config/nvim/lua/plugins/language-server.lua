@@ -11,12 +11,23 @@ return {
       ensure_installed = {
         "vtsls",
         "eslint",
-        "lua_ls"
+        "lua_ls",
+        "vue_ls"
       }
     },
     dependencies = {
-        { "mason-org/mason.nvim", opts = {} },
+        { "mason-org/mason.nvim", opts = { }},
         "neovim/nvim-lspconfig",
     },
+    config = function(_, opts)
+      require("mason-lspconfig").setup(opts)
+      vim.lsp.config("vtsls", {
+        filetypes = {
+          "javascript", "javascriptreact", "javascript.jsx",
+          "typescript", "typescriptreact", "typescript.tsx",
+          "vue",
+        },
+      })
+    end,
   }
 }
