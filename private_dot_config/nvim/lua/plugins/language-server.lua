@@ -7,7 +7,11 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-      automatic_enable = true,
+      -- Auto-enable installed servers, but NOT tsgo (TypeScript native preview):
+      -- vtsls is our TypeScript server, and running both conflicts.
+      automatic_enable = {
+        exclude = { "tsgo" },
+      },
       ensure_installed = {
         "vtsls",
         "eslint",
