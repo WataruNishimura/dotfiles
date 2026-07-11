@@ -19,7 +19,8 @@ return {
         javscriptreact = js_formatter,
         typescript = js_formatter,
         typescriptreact = js_formatter,
-        vue = js_formatter
+        vue = js_formatter,
+        python = { "ruff_format" }
       }
     })
   end

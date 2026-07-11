@@ -16,7 +16,9 @@ return {
         "vtsls",
         "eslint",
         "lua_ls",
-        "vue_ls"
+        "vue_ls",
+        "basedpyright",
+        "ruff"
       }
     },
     dependencies = {
