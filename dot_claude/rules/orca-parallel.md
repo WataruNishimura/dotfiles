@@ -3,6 +3,11 @@
 ## When this applies
 - Apply only if `orca status --json` succeeds. Otherwise ignore this rule.
 - If the prompt contains "[DELEGATED]", you are a child agent: do not create worktrees; finish the task in your current worktree.
+## Setup
+- If the `orca-cli` or `orchestration` skill is missing, install it from stablyai/orca with the skills CLI (vercel-labs/skills):
+  - `npx skills add stablyai/orca --skill orca-cli -g`
+  - `npx skills add stablyai/orca --skill orchestration -g`
+- Update installed skills with `npx skills update`.
 ## Never work in the main checkout
 - The main checkout is for reading, planning, and review only. Never edit files, create or switch branches (`git switch`, `git checkout -b`), commit, or start dev servers or other long-running processes there.
 - You are in the main checkout if `git rev-parse --git-dir` equals `git rev-parse --git-common-dir`. Check this before any change.
